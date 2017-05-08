@@ -1,0 +1,43 @@
+﻿<Page x:Class="EventKnowledgeAPI_WPF_Samples.GetHotEventsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EventKnowledgeAPI_WPF_Samples"
+      xmlns:sys="clr-namespace:System;assembly=mscorlib"
+      xmlns:userControls="clr-namespace:EventKnowledgeAPI_WPF_Samples.UserControls"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="400"
+      Title="GetHotEvents">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Margin="5, 5, 0, 0" FontWeight="Bold">Get Hot Events By Date</TextBlock>
+        <TextBlock Grid.Row="1"  Margin="5, 5, 0, 0">Please select a date and click [OK]</TextBlock>
+        <StackPanel Grid.Row="2"  Orientation="Horizontal"  Margin="5, 5, 0, 0">
+            <DatePicker x:Name="DatePickerText" Width="200" Margin="0, 5, 0, 0" SelectedDate="{x:Static sys:DateTime.Now}" Focusable="False"></DatePicker>
+            <Button Click="OKButton_Click" Margin="5, 5, 0, 0">OK</Button>
+        </StackPanel>
+        <TextBlock Grid.Row="3" TextWrapping="Wrap" Margin="5">The main information of each event is shown in the list. For more details, please click to see the detail.</TextBlock>
+        <StackPanel Grid.Row="4" Orientation="Horizontal"  Margin="5, 5, 0, 0">
+            <TextBlock x:Name="_retrieveStatus" FontWeight="Bold"></TextBlock>
+            <TextBlock Margin="10, 0, 0, 0">
+                <Hyperlink Click="Hyperlink_Click">
+                    <TextBlock x:Name="HyperLinkText"></TextBlock>
+                </Hyperlink>
+            </TextBlock>
+        </StackPanel>
+        <userControls:EventUserControl x:Name="_eventUserControl" Grid.Row="5" Margin="0,0,0,5">
+        </userControls:EventUserControl>
+
+    </Grid>
+</Page>
+

@@ -1,0 +1,42 @@
+﻿<Page x:Class="EventKnowledgeAPI_WPF_Samples.GetEventDetailPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EventKnowledgeAPI_WPF_Samples"
+      xmlns:userControls="clr-namespace:EventKnowledgeAPI_WPF_Samples.UserControls"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="400"
+      Title="GetEventDetail">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Margin="5, 5, 0, 0" FontWeight="Bold">Get Event Detail(Documents) By Event ID</TextBlock>
+        <TextBlock Grid.Row="1"  Margin="5, 5, 0, 0">Please type or paste a event ID below and click [OK]</TextBlock>
+        <StackPanel Grid.Row="2"  Orientation="Horizontal"  Margin="5, 5, 0, 0">
+            <TextBox x:Name="EventIdTextBox" Width="300" Margin="0, 5, 0, 0">cf279f690d2a9a4bb4912981452be957</TextBox>
+            <Button Click="OKButton_Click" Margin="5, 5, 0, 0">OK</Button>
+        </StackPanel>
+        <TextBlock Grid.Row="3" TextWrapping="Wrap" Margin="5">The main information of each document is shown in the list. For more details, please click to see the detail.</TextBlock>
+        <StackPanel Grid.Row="4" Orientation="Horizontal"  Margin="5, 5, 0, 0">
+            <TextBlock x:Name="_retrieveStatus" FontWeight="Bold"></TextBlock>
+            <TextBlock Margin="10, 0, 0, 0">
+                <Hyperlink Click="Hyperlink_Click">
+                    <TextBlock x:Name="HyperLinkText"></TextBlock>
+                </Hyperlink>
+            </TextBlock>
+        </StackPanel>
+        <userControls:DocumentUserControl x:Name="_documentUserControl" Grid.Row="5" >
+        </userControls:DocumentUserControl>
+
+    </Grid>
+</Page>
+
