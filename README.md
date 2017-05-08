@@ -1,7 +1,6 @@
 # Microsoft EventKnowledge API: Windows Client Library & Sample
 This repo contains the Windows client library & sample for the Microsoft
-EventKnowledge API, an offering within [Microsoft Cognitive Services]
-(https://www.microsoft.com/cognitive-services), formerly known as Project Oxford.
+EventKnowledge API, an easy-to-use API designed to help developers find and surface events related to specific entities. Just start with an entity from Wikipedia, and the API will provide a list of related events by time. It can also start with an event and return related news, or start with a date and return trending news related to the date. Additional controls allow you to include a limit on the number of results to return, or exclude specific items from the results.
 
 * [Learn about the EventKnowledge API](https://dev.labs.cognitive.microsoft.com/docs/services/590bf0b54f545a0de4422d3b)
 * [Read the documentation](https://labs-wu-ppe.azurewebsites.net/en-us/Project-Cuzco/documentation/overview)
@@ -10,8 +9,7 @@ EventKnowledge API, an offering within [Microsoft Cognitive Services]
 ## The Client Library
 
 The EventKnowledge API client library is a thin C\# client wrapper for
-Microsoft Cognitive Services (formerly Project Oxford) EventKnowledge
-REST APIs.  
+Microsoft EventKnowledge APIs.
 
 The easiest way to use this client library is to get 
 microsoft.projectoxford.eventknowledge package from [nuget](https://nuget.org).
@@ -22,7 +20,7 @@ Please go to [EventKnowledge API Package in nuget](https://www.nuget.org/package
 
 
 This sample is a Windows WPF application to demonstrate the use of 
-Microsoft Cognitive Services EventKnowledge API.
+Microsoft EventKnowledge API.
 
 It demonstrates EventKnowledge API by specifying a date, using a Wikipedia ID 
 or providing an event ID.
